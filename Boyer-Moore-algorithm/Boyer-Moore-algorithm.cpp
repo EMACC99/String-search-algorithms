@@ -11,7 +11,8 @@ void display_pattern(const std::string &txt, const std::string &pattern, const i
 	std::string pattern_to_display (shift, ' ');
 
 	pattern_to_display += pattern;
-
+	
+	std::cout << "El patron occurre en el shift  " << shift << std::endl;
 	std::cout << txt << std::endl;
 	std::cout << pattern_to_display << std::endl;
 	std::cout << std::endl;
@@ -47,7 +48,6 @@ void search(const std::string &text, const std::string &pattern) {
 			--j;
 
 		if (j < 0) { //si todo es un match
-			std::cout << "El patron occurre en el shift  " << shift << std::endl;
 			display_pattern(text, pattern, shift);
 
 			shift += (shift + m < n) ? m - badchar[text[shift + m]] : 1; //regresa el shift para que siga buscando despues de la ultima ocurrencia el uno es por si occure al final del texto 
