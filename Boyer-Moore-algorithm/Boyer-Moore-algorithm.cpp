@@ -1,7 +1,4 @@
-﻿// Boyer-Moore-algorithm.cpp : Defines the entry point for the application.
-//
-
-#include <iostream>
+﻿#include <iostream>
 #include <string>
 #include <cstdlib>
 #include <algorithm>
@@ -54,13 +51,13 @@ void search(const std::string &text, const std::string &pattern) {
 			display_pattern(text, pattern, shift);
 
 			shift += (shift + m < n) ? m - badchar[text[shift + m]] : 1; //regresa el shift para que siga buscando despues de la ultima ocurrencia el uno es por si occure al final del texto 
+			// shift += m - badchar[text[shift + m]] if shift + m < n else 1
 		}
 		else
 			shift += std::max(1, j - badchar[text[shift + j]]); //si no, tenemos que saltar a la posicion despues de donde aparecio el caracter que no aparece en el patron (o uno si la resta es negativa)
 
-	}
+	}	
 }
-
 
 
 int main(int arg, char* argv[]) {
