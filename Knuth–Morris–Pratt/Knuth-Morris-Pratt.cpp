@@ -4,7 +4,6 @@
 #include <algorithm>
 
 void display_pattern(const std::string &text, const std::string &pattern, const int &shift) {
-	
 	std::string pattern_to_display(shift, ' ');
 
 	pattern_to_display += pattern;
@@ -13,7 +12,6 @@ void display_pattern(const std::string &text, const std::string &pattern, const 
 	std::cout << text << std::endl;
 	std::cout << pattern_to_display << std::endl;
 	std::cout << std::endl;
-
 }
 
 
@@ -73,9 +71,9 @@ void search(const std::string &pattern, const std::string &text) {
 
 int main(int arg, char * argv[]){ 
 
-	std::string text = "ANPANMAN";
-	std::string pattern = "AN";
+	std::string text = "ABABDABACDABABCABAB";
+	std::string pattern = "ABABCABAB";
 	search(pattern, text);
 
-	return 0;
+	return EXIT_SUCCESS;
 }

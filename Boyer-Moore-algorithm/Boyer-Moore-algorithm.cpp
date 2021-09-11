@@ -64,5 +64,6 @@ int main(int arg, char* argv[]) {
 	std::string text = "ANPANMAN";
 	std::string pattern = "AN";
 	search(text, pattern);
-	return 0;
+
+	return EXIT_SUCCESS;
 }
